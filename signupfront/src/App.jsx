@@ -7,13 +7,13 @@ class App extends Component {
         super()
         this.state = {
             fullName:'',
-            username:'',
+            Role:'',
             email:'',
             password:''
         }
         this.changeFullName = this.changeFullName.bind(this)
         this.changeEmail = this.changeEmail.bind(this)
-        this.changeUsername = this.changeUsername.bind(this)
+        this.changeRole = this.changeRole.bind(this)
         this.changePassword= this.changePassword.bind(this)
         this.onSubmit= this.onSubmit.bind(this)
     }
@@ -23,9 +23,9 @@ class App extends Component {
             fullName:event.target.value
         })
     }
-    changeUsername(event){
+    changeRole(event){
         this.setState({
-            username:event.target.value
+            role:event.target.value
         })
     }
     changeEmail(event){
@@ -44,7 +44,7 @@ class App extends Component {
 
         const registered = {
             fullName: this.state.fullName,
-            username:this.state.username,
+            role:this.state.role,
             email:this.state.email,
             password:this.state.password
         }
@@ -55,7 +55,7 @@ class App extends Component {
 
         this.setState({
             fullName:'',
-            username:'',
+            role:'',
             email:'',
             password:''
 
@@ -77,9 +77,9 @@ class App extends Component {
                             />
 
                             <input type='text'
-                            placeholder='Username'
-                            onChange={this.changeUsername}
-                            value = {this.state.username}
+                            placeholder='Role'
+                            onChange={this.changeRole}
+                            value = {this.state.role}
                             className='form-control form-group'
                             />
 
